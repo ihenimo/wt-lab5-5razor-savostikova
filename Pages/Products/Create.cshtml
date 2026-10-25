@@ -1,0 +1,51 @@
+@page
+@model wt_lab5_5razor_savostikova.Pages.Products.CreateModel
+
+<div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-sm rounded-4">
+                <div class="card-body p-4">
+                    <h2 class="mb-4">Добавление блюда</h2>
+
+                    <form method="post">
+                        <!-- Поле Название -->
+                        <div class="mb-3">
+                            <label asp-for="Dish.Name" class="form-label">Название</label>
+                            <input asp-for="Dish.Name" class="form-control" />
+                            <span asp-validation-for="Dish.Name" class="text-danger"></span>
+                        </div>
+
+                        <!-- Поле Категория -->
+                        <div class="mb-3">
+                            <label asp-for="Dish.Category" class="form-label">Категория</label>
+                            <input asp-for="Dish.Category" class="form-control" />
+                        </div>
+
+                        <!-- Поле Цена -->
+                        <div class="mb-3">
+                            <label asp-for="Dish.Price" class="form-label">Цена</label>
+                            <input asp-for="Dish.Price" class="form-control" />
+                            <span asp-validation-for="Dish.Price" class="text-danger"></span>
+                        </div>
+
+                        <!-- Поле Описание -->
+                        <div class="mb-3">
+                            <label asp-for="Dish.Description" class="form-label">Описание</label>
+                            <textarea asp-for="Dish.Description" class="form-control" rows="3"></textarea>
+                        </div>
+
+                        <!-- Кнопки -->
+                        <button type="submit" class="btn btn-primary">Сохранить</button>
+                        <a asp-page="./Index" class="btn btn-secondary">Назад</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Подключаем скрипты для работы клиентской валидации (Bootstrap) -->
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

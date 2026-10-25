@@ -1,0 +1,20 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Главная";
+}
+
+<div class="py-5">
+    <div class="card shadow-sm rounded-4 text-center p-5">
+        <div class="card-body">
+            <h1 class="display-4 fw-bold mb-3">Доставка еды</h1>
+            <p class="lead text-muted mb-4">
+                Веб-приложение на ASP.NET Core Razor Pages.
+                Просматривайте меню, добавляйте блюда и оформляйте заказы.
+            </p>
+            <a asp-page="/Products/Index" class="btn btn-primary btn-lg">
+                Перейти к меню
+            </a>
+        </div>
+    </div>
+</div>
